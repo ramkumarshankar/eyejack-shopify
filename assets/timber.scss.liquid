@@ -106,8 +106,9 @@ $colorBody: {{ settings.color_body_bg }};
 $colorBorder: {{ settings.color_borders }};
 
 // Nav and dropdown link background
-$colorNav: #f2f2f2;
-$colorNavText: #333;
+$colorNav: #ffffff;
+$colorNavText: #3c3c3b;
+$colorNavTextActive: #e95557;
 
 // Site Footer
 $colorFooterBg: {{ settings.color_footer_bg }};
@@ -1872,7 +1873,7 @@ label.error {
   &:hover,
   &:active,
   &:focus {
-    color: darken($colorNavText, 15%);
+    color: $colorNavTextActive;
   }
 
   .icon-arrow-down {
@@ -1884,6 +1885,7 @@ label.error {
 
   .site-nav--active > & {
     font-weight: bold;
+    color: $colorNavTextActive;
   }
 
   .site-nav--mobile & {
