@@ -1,0 +1,5 @@
+development:
+  password: 6b33a3d7eb5066ea5b3e258ff8f35054
+  theme_id: "160894800"
+  store: eyejack.myshopify.com
+  timeout: 30s
