@@ -85,7 +85,7 @@ $colorSecondary: {{ settings.color_secondary }};
 $colorBtnPrimary: $colorPrimary;
 $colorBtnPrimaryHover: darken($colorBtnPrimary, 10%);
 $colorBtnPrimaryActive: darken($colorBtnPrimaryHover, 10%);
-$colorBtnPrimaryText: #fff;
+$colorBtnPrimaryText: #e95557;
 
 $colorBtnSecondary: $colorSecondary;
 $colorBtnSecondaryHover: darken($colorBtnSecondary, 10%);
@@ -137,7 +137,7 @@ $drawerTransition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
 $siteWidth: 1180px;
 $gutter: 30px;
 $gridGutter: 30px; // can be a %, but nested grids will have smaller margins because of it
-$radius: 3px;
+$radius: 0px;
 
 // Z-index
 $zindexNavDropdowns: 5;
@@ -812,6 +812,11 @@ h1 {
   font-size: em(36px);
 }
 
+h1.ProductName {
+  font-weight: normal;
+  font-style: normal;
+}
+
 h2 {
   font-size: em(28px);
 }
@@ -893,6 +898,12 @@ sup {
 
 sub {
   bottom: -0.5em;
+}
+
+span#ProductPrice {
+  font-weight: 500;
+  font-style: normal;
+  color: $colorNavTextActive;
 }
 
 /*================ Blockquotes ================*/
@@ -1047,6 +1058,7 @@ hr {
 ==============================================================================*/
 .rte {
   margin-bottom: $gutter / 2;
+  clear: both;
 
   a {
     text-decoration: underline;
@@ -1109,20 +1121,22 @@ html input[disabled] {
   width: auto;
   margin: 0;
   line-height: 1.42;
-  font-weight: bold;
+  font-weight: normal;
+  font-style: normal;
   text-decoration: none;
   text-align: center;
+  text-transform: uppercase;
   vertical-align: middle;
   white-space: nowrap;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 2px solid $colorNavTextActive;
   @include user-select(none);
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: $radius;
 
   /*================ Set primary button colors - can override later ================*/
-  background-color: $colorBtnPrimary;
+  background-color: #fff;
   color: $colorBtnPrimaryText;
 
   &:hover {
@@ -1537,6 +1551,10 @@ select::-ms-expand {
 }
 
 /*================ Form labels ================*/
+label {
+  text-transform: uppercase;
+}
+
 .hidden-label {
   position: absolute;
   height: 0;
@@ -2505,7 +2523,7 @@ label.error {
     text-align: center;
     width: 100%;
     padding: 5px 25px;
-    margin: 0;
+    margin-top: 10px;
   }
 }
 
