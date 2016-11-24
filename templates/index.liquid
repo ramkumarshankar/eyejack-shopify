@@ -14,13 +14,19 @@
 
 <hr>
 
-<div class="wrapper">
+<div class="wrapper highlight-area">
   <div class="grid-uniform">
     <div class="grid__item one-half medium-down--one-whole">
       {{ "artbook.png" | asset_url | img_tag: "Prosthetic Reality" }}
     </div>
-    <div class="grid__item one-half medium-down--one-whole">
-      {{ "store.png" | asset_url | img_tag: "Download" }}
+    <div class="grid__item one-half medium-down--one-whole storebg">
+      {{ "storebg.png" | asset_url | img_tag: "Download" }}
+      <div class="appstore-link">
+      {{ "appstore.png" | asset_url | img_tag: "App Store" }}
+      </div>
+      <div class="googleplay-link">
+      {{ "googleplay.png" | asset_url | img_tag: "App Store" }}
+      </div>
     </div>
   </div>
 </div>
@@ -65,12 +71,15 @@
   {% endfor %}
 
 </div>
+<div class="more-products red-link">
+  {{ 'MORE PRODUCTS >' | link_to: './collections/all', 'More Products' }}
+</div>
 </div>
 
 <hr>
 
 <div class="wrapper text-center">
-<h5 class="social-header">Follow us on <span class="instagram-link">Instagram</span></h5>
+<h5 class="social-header">Follow us on <span class="red-link">Instagram</span></h5>
 
 <div class="instagram-images">
 

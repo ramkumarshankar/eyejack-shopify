@@ -841,7 +841,7 @@ h5.social-header {
   margin-bottom: 40px;
 }
 
-.instagram-link {
+.red-link {
   color: $colorNavTextActive;
   font-weight: 900;
   font-style: normal;
@@ -2250,6 +2250,8 @@ label.error {
   img {
     display: block;
     margin: 0 auto;
+    height: 250px;
+    object-fit: cover;
   }
   img:hover {
     border: 2px solid $colorNavTextActive;
@@ -2603,4 +2605,37 @@ label.error {
 
 div.instagram-images {
   display: inline-block;
+}
+
+div.highlight-area img {
+  padding:5%;
+}
+
+div.more-products a, div.more-products .text-link {
+  color: #e95557;
+  text-decoration: none;
+  background: transparent;
+}
+
+div.more-products a:hover,
+div.more-products a:focus {
+  color: #e95557;
+}
+
+div .storebg {
+  position: relative
+}
+
+div.appstore-link {
+  position: absolute;
+  bottom: 15%;
+  width: 40%;
+  left:13%;
+}
+
+div.googleplay-link {
+  position: absolute;
+  bottom: 15%;
+  width: 40%;
+  right:7%;
 }
