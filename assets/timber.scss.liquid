@@ -725,7 +725,7 @@ body {
   padding: 0 ($gutter / 2);
 
   @include at-query ($min, $small) {
-    padding: 0 $gutter;
+    padding: 0 $gutter * 5;
   }
 }
 
@@ -823,6 +823,11 @@ h2 {
 
 h3 {
   font-size: em(22px);
+}
+
+footer.site-footer h4 {
+  font-weight: 900;
+  font-style: normal;
 }
 
 h4 {
@@ -2608,7 +2613,7 @@ div.instagram-images {
 }
 
 div.highlight-area img {
-  padding:5%;
+
 }
 
 div.more-products a, div.more-products .text-link {
@@ -2630,12 +2635,12 @@ div.appstore-link {
   position: absolute;
   bottom: 15%;
   width: 40%;
-  left:13%;
+  left:11%;
 }
 
 div.googleplay-link {
   position: absolute;
   bottom: 15%;
   width: 40%;
-  right:7%;
+  right:5%;
 }
