@@ -103,15 +103,20 @@
             </p>
           {% endif %}
 
-          <div class="left">
+
 
           <label for="Quantity" class="quantity-selector">{{ 'products.product.quantity' | t }}</label>
+          <div class="grid">
+          <div class="grid__item one-half">
           <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
           </div>
 
-          <button type="submit" name="add" id="AddToCart" class="btn right" style="margin-top: 25px; width: 50%">
+          <div class="grid__item one-half">
+
+          <button type="submit" name="add" id="AddToCart" class="btn right" style="width:100%; margin-top:5px;">
             <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span>
           </button>
+          </div>
         </form>
 
       </div>
