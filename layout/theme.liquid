@@ -265,14 +265,17 @@
     </main>
 
     <!-- begin site-footer -->
-    <footer class="site-footer small--text-center" role="contentinfo">
+    <footer class="site-footer" role="contentinfo">
       <div class="wrapper">
         <div class="grid">
+          <div class="grid__item large--one-whole medium--one-whole">
+          <h4>EYEJACK</h4>
+          </div>
+        </div>
+        <div class="grid">
           <div class="grid__item large--one-half medium--one-half">
-            <h4>EYEJACK</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada interdum enim in blandit. Donec mattis felis euismod semper placerat. Ut dapibus, dolor in venenatis elementum,</p>
             <p>Mauris odio porttitor mauris, vitae imperdiet quam massa sit amet tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a egestas Mauris turpis libero.</p>
-            <p><a href="#">Read more</a></p>
           {% if settings.footer_social_enable %}
               <h3>{{ 'layout.footer.social_title' | t }}</h3>
                 <ul class="inline-list social-icons">
@@ -341,7 +344,7 @@
             {% endcomment %}
             {% unless shop.enabled_payment_types == empty %}
               {% assign payment_icons_available = 'amazon_payments,american_express,bitcoin,cirrus,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,jcb,litecoin,maestro,master,paypal,visa' | split: ',' %}
-              <h4 class="text-left">{{ 'layout.footer.accepted_payments' | t }}</h4>
+              <h6 class="text-left">{{ 'layout.footer.accepted_payments' | t }}</h6>
               <ul class="inline-list payment-icons">
                 {% for type in shop.enabled_payment_types %}
                   {% if payment_icons_available contains type %}
