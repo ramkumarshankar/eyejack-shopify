@@ -16,7 +16,10 @@
 <div class="wrapper highlight-area">
   <div class="grid-uniform">
     <div class="grid__item one-half medium-down--one-whole">
-      {{ "artbook.png" | asset_url | img_tag: "Prosthetic Reality" }}
+      {% assign product = all_products['prosthetic-reality-book'] %}
+      <a href="{{ product.url | within: collection }}">
+        <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+      </a>
     </div>
     <div class="grid__item one-half medium-down--one-whole storebg">
       {{ "storebg.png" | asset_url | img_tag: "Download" }}
