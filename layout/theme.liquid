@@ -399,6 +399,32 @@
           addToCartSelector: '#AddToCart',
           cartCountSelector: '#CartCount',
           cartCostSelector: '#CartCost',
+          disableAjaxCart: false,
+          enableQtySelectors: true,
+          moneyFormat: {{ shop.money_format | json }}
+        });
+      });
+
+      jQuery(document.body).on('afterCartLoad.ajaxCart', function(evt, cart) {
+        // Bind to 'afterCartLoad.ajaxCart' to run any javascript after the cart has loaded in the DOM
+        timber.RightDrawer.open();
+      });
+    </script>
+  {% endif %}
+  {% if settings.ajax_cart_method == "page" %}
+    {{ 'handlebars.min.js' | asset_url | script_tag }}
+    {% include 'ajax-cart-template' %}
+    {{ 'ajax-cart.js' | asset_url | script_tag }}
+    <script>
+      jQuery(function($) {
+        ajaxCart.init({
+          formSelector: '#AddToCartForm',
+          cartContainer: '#CartContainer',
+          addToCartSelector: '#AddToCart',
+          cartCountSelector: '#CartCount',
+          cartCostSelector: '#CartCost',
+          disableAjaxCart: true,
+          enableQtySelectors: true,
           moneyFormat: {{ shop.money_format | json }}
         });
       });

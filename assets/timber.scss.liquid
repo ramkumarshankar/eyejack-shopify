@@ -1861,6 +1861,7 @@ label.error {
 
 .site-header__cart-toggle {
   display: inline-block;
+  padding-left:30px;
 }
 
 .site-header__search {
@@ -2669,3 +2670,56 @@ div.recommended-items h4 {
 footer.site-footer .grid__item {
 
 }
+
+/*============================================================================
+  #Quantity Selector - we need this for page cart page as well
+==============================================================================*/
+{% if settings.ajax_cart_method == "page" %}
+
+/*================ Quantity Selectors ================*/
+.js-qty {
+  position: relative;
+  margin-bottom: 1em;
+  max-width: 100px;
+  min-width: 75px;
+  overflow: visible;
+
+  input {
+    display: block;
+    background: none;
+    text-align: center;
+    width: 100%;
+    padding: 5px 25px;
+  }
+}
+
+.js-qty__adjust {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  border: 0 none;
+  padding: 0 8px;
+  background: none;
+  text-align: center;
+  overflow: hidden;
+  @include user-select(none);
+
+  &:hover,
+  &:focus {
+    color: $colorPrimary;
+  }
+}
+
+.js-qty__adjust--plus {
+  right: 0;
+  border-left: 1px solid $colorBorder;
+}
+
+.js-qty__adjust--minus {
+  left: 0;
+  border-right: 1px solid $colorBorder;
+}
+
+{% endif %}
