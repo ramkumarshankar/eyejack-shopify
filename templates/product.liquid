@@ -49,7 +49,7 @@
 
     <div class="grid__item large--one-half">
 
-      <h1 itemprop="name" class="ProductName">{{ product.title }}</h1>
+      <h1 itemprop="name">{{ product.title }}</h1>
 
       <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
         <meta itemprop="priceCurrency" content="{{ shop.currency }}">
@@ -103,20 +103,12 @@
             </p>
           {% endif %}
 
-
-
           <label for="Quantity" class="quantity-selector">{{ 'products.product.quantity' | t }}</label>
-          <div class="grid">
-          <div class="grid__item one-half">
           <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
-          </div>
 
-          <div class="grid__item one-half">
-
-          <button type="submit" name="add" id="AddToCart" class="btn right" style="width:100%; margin-bottom:15px;">
+          <button type="submit" name="add" id="AddToCart" class="btn">
             <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span>
           </button>
-          </div>
         </form>
 
       </div>
@@ -150,7 +142,7 @@
   </div>
 
 </div>
-</div>
+
 {% comment %}
   To take advantage of a callback on the select dropdown, add option_selection.js
   and customize the JS in timber.productPage as needed.
