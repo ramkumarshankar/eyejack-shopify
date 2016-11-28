@@ -370,6 +370,7 @@
   </div>
 
   {{ 'fastclick.min.js' | asset_url | script_tag }}
+  {{ 'instafeed.min.js' | asset_url | script_tag }}
   {{ 'timber.js' | asset_url | script_tag }}
 
   {% comment %}
@@ -382,6 +383,16 @@
       });
     {% endif %}
   </script>
+
+  <script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'user',
+        userId: 'id',
+        resolution: 'thumbnail',
+        accessToken: 'accesstoken'
+    });
+    feed.run();
+</script>
 
   {% comment %}
     Ajaxify your cart with this plugin.
