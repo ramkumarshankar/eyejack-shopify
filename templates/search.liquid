@@ -1,4 +1,5 @@
 <!-- /templates/search.liquid -->
+<div class="wrapper">
 {% comment %}
 
   To return only products or pages in results:
@@ -26,7 +27,7 @@
 {% paginate search.results by 10 %}
 
   <div class="grid">
-    <div class="grid__item large--two-thirds push--large--one-sixth">
+    <div class="grid__item">
 
       {% if search.performed %}
         {% if search.results_count == 0 %}
@@ -187,3 +188,5 @@
   {% include 'respond' %}
   {% layout none %}
 {% endunless %}
+
+</div>
