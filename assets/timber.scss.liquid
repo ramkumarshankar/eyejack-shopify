@@ -2736,18 +2736,18 @@ div#instafeed a img {
 
 /* Remove logo and header */
 html[data-useragent*='iPhone']:not([data-useragent*='Safari']) .site-header,
-html[data-useragent*='wv'] .site-header {
+html[data-useragent*='wv'][data-useragent*="Chrome"] .site-header {
   display: none;
 }
 
 /* Remove navigation */
 html[data-useragent*='iPhone']:not([data-useragent*='Safari']) button.js-drawer-open-left,
-html[data-useragent*='wv'] button.js-drawer-open-left {
+html[data-useragent*='wv'][data-useragent*="Chrome"] button.js-drawer-open-left {
   display: none;
 }
 
 /* Remove breadcrumb */
 html[data-useragent*='iPhone']:not([data-useragent*='Safari']) nav.breadcrumb,
-html[data-useragent*='wv'] nav.breadcrumb {
+html[data-useragent*='wv'][data-useragent*="Chrome"] nav.breadcrumb {
   display: none;
 }
