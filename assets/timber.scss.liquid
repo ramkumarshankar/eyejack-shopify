@@ -2672,6 +2672,10 @@ footer.site-footer .grid__item {
 
 }
 
+div#instafeed a img {
+  padding-left:10px;
+}
+
 /*============================================================================
   #Quantity Selector - we need this for page cart page as well
 ==============================================================================*/
@@ -2724,3 +2728,26 @@ footer.site-footer .grid__item {
 }
 
 {% endif %}
+
+/*============================================================================
+  #iOS and Android Webview specific styles
+  Used by EyeJack App. We hide some elements here.
+==============================================================================*/
+
+/* Remove logo and header */
+html[data-useragent*='iPhone']:not([data-useragent*='Safari']) .site-header,
+html[data-useragent*='wv'] .site-header {
+  display: none;
+}
+
+/* Remove navigation */
+html[data-useragent*='iPhone']:not([data-useragent*='Safari']) button.js-drawer-open-left,
+html[data-useragent*='wv'] button.js-drawer-open-left {
+  display: none;
+}
+
+/* Remove breadcrumb */
+html[data-useragent*='iPhone']:not([data-useragent*='Safari']) nav.breadcrumb,
+html[data-useragent*='wv'] nav.breadcrumb {
+  display: none;
+}
