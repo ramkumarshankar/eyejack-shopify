@@ -24,12 +24,12 @@
     <div class="grid__item one-half medium-down--one-whole storebg">
       {{ "storebg.png" | asset_url | img_tag: "Download" }}
       <div class="appstore-link">
-      <a href="https://itunes.apple.com/us/app/eyejack/id1163248223?mt=8">
+      <a href="https://itunes.apple.com/us/app/eyejack/id1163248223?mt=8" target="_blank">
       {{ "appstore.png" | asset_url | img_tag: "App Store" }}
       </a>
       </div>
       <div class="googleplay-link">
-      <a href="#">
+      <a href="#" target="_blank">
       {{ "googleplay.png" | asset_url | img_tag: "App Store" }}
       </a>
       </div>
@@ -51,7 +51,8 @@
     Loop through products in the prosthetic-reality-book collection.
     This collection is created by default, but you must add products to it.
   {% endcomment %}
-  {% for product in collections.prosthetic-reality-book.products limit:3 %}
+  {% assign all_products = collections.prosthetic-reality-book.products | sort: 'title' %}
+  {% for product in all_products limit:3 %}
 
     {% comment %}
       Change the grid item width by using classes from the grid in
@@ -85,7 +86,7 @@
 <hr>
 
 <div class="wrapper text-center">
-<h5 class="social-header">Follow us on <a href="http://instagram.com/eyejackapp"><span class="red-link">Instagram</span></a></h5>
+<h5 class="social-header">Follow us on <a href="http://instagram.com/eyejackapp" target="_blank"><span class="red-link">Instagram</span></a></h5>
 
 <div class="grid">
 <div class="grid__item one-whole">
