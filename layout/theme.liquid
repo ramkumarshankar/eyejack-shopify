@@ -393,9 +393,9 @@
   <script type="text/javascript">
     var feed = new Instafeed({
         get: 'user',
-        userId: 'userId',
+        userId: '{{ settings.instagram_user_id }}',
         resolution: 'thumbnail',
-        accessToken: 'accessToken',
+        accessToken: '{{ settings.instagram_access_token }}',
         limit: 10
     });
     feed.run();

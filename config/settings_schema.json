@@ -201,5 +201,22 @@
         "info": "https:\/\/www.facebook.com\/shopify"
       }
     ]
+  },
+  {
+    "name": "Instagram",
+    "settings": [
+      {
+        "type": "text",
+        "id": "instagram_user_id",
+        "label": "Instagram User ID",
+        "info": "Numeric User ID"
+      },
+      {
+        "type": "text",
+        "id": "instagram_access_token",
+        "label": "Instagram Access Token",
+        "info": "[Configuring Instafeed.js](https:\/\/gist.github.com\/mojaray2k\/b502d75dd7a9fa277876)"
+      }
+    ]
   }
 ]
