@@ -353,7 +353,7 @@
             {% endcomment %}
             {% unless shop.enabled_payment_types == empty %}
               {% assign payment_icons_available = 'amazon_payments,american_express,bitcoin,cirrus,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,jcb,litecoin,maestro,master,paypal,visa' | split: ',' %}
-              <h6 class="text-left">{{ 'layout.footer.accepted_payments' | t }}</h6>
+              <p class="text-left">{{ 'layout.footer.accepted_payments' | t }}</p>
               <ul class="inline-list payment-icons">
                 {% for type in shop.enabled_payment_types %}
                   {% if payment_icons_available contains type %}
