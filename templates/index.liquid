@@ -18,7 +18,7 @@
     <div class="grid__item one-half medium-down--one-whole">
       {% assign product = all_products['prosthetic-reality-book'] %}
       <a href="{{ product.url | within: collection }}">
-        <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+        {{ "tile_featured.png" | asset_url | img_tag: "Featured - Prosthetic Reality Artbook"}}
       </a>
     </div>
     <div class="grid__item one-half medium-down--one-whole storebg">
@@ -30,7 +30,7 @@
       </div>
       <div class="googleplay-link">
       <a href="#" target="_blank">
-      {{ "googleplay.png" | asset_url | img_tag: "App Store" }}
+      {{ "googleplay.png" | asset_url | img_tag: "Google Play" }}
       </a>
       </div>
     </div>
