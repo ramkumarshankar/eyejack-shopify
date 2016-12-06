@@ -394,7 +394,7 @@
         userId: '{{ settings.instagram_user_id }}',
         resolution: 'thumbnail',
         accessToken: '{{ settings.instagram_access_token }}',
-        template: '<div class="grid__item large--one-sixth medium-down--one-quarter"><a href="\{\{link\}\}"><img src="\{\{image\}\}" /></a></div>',
+        template: '<div class="grid__item large--one-sixth medium-down--one-quarter"><a href="\{\{link\}\}" target="_blank"><img src="\{\{image\}\}" /></a></div>',
         limit: 12
     });
     feed.run();
