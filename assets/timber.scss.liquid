@@ -2613,9 +2613,14 @@ label.error {
 
 /*================ Other styles ================*/
 
-div.instagram-images {
-
+div#instafeed .grid__item {
+  padding-left: 10px;
 }
+
+div#instafeed img:hover {
+  outline: 4px solid $colorNavTextActive;
+}
+
 
 div.highlight-area img {
 
@@ -2638,19 +2643,16 @@ div .storebg {
 
 div.appstore-link {
   position: absolute;
-  width: 45%;
-  left: 30%;
-  bottom: 5%;
-  /* bottom: 15%;
-  left:11%;*/
+  width: 40%;
+  bottom: 7%;
+  left:11%;
 }
 
 div.googleplay-link {
-  display: none;
-  /* position: absolute;
-  bottom: 15%;
+  position: absolute;
+  bottom: 7%;
   width: 40%;
-  right:5%;*/
+  right:5%;
 }
 
 div.additional_checkout_buttons button {
@@ -2673,10 +2675,6 @@ div.recommended-items h4 {
 
 footer.site-footer .grid__item {
 
-}
-
-div#instafeed a img {
-  padding-left:10px;
 }
 
 /*============================================================================
@@ -2739,18 +2737,21 @@ div#instafeed a img {
 
 /* Remove logo and header */
 html[data-useragent*='iPhone']:not([data-useragent*='Safari']) .site-header,
-html[data-useragent*='wv'][data-useragent*="Chrome"] .site-header {
+html[data-useragent*='wv'][data-useragent*="Chrome"] .site-header
+html[data-useragent*='EyeJack'] .site-header {
   display: none;
 }
 
 /* Remove navigation */
 html[data-useragent*='iPhone']:not([data-useragent*='Safari']) button.js-drawer-open-left,
-html[data-useragent*='wv'][data-useragent*="Chrome"] button.js-drawer-open-left {
+html[data-useragent*='wv'][data-useragent*="Chrome"] button.js-drawer-open-left,
+html[data-useragent*='EyeJack'] button.js-drawer-open-left {
   display: none;
 }
 
 /* Remove breadcrumb */
 html[data-useragent*='iPhone']:not([data-useragent*='Safari']) nav.breadcrumb,
-html[data-useragent*='wv'][data-useragent*="Chrome"] nav.breadcrumb {
+html[data-useragent*='wv'][data-useragent*="Chrome"] nav.breadcrumb,
+html[data-useragent*='EyeJack'] nav.breadcrumb {
   display: none;
 }
