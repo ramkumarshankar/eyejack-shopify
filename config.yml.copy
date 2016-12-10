@@ -1,0 +1,5 @@
+development:
+  password: your_password
+  theme_id: "theme_id"
+  store: eyejack.myshopify.com
+  timeout: 30s
