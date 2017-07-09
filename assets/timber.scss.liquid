@@ -868,6 +868,11 @@ h5.social-header {
   font-style: normal;
 }
 
+.secondary-label {
+  color: #A0A2A4;
+  text-transform: none;
+}
+
 h6 {
   font-size: em(14px);
 }
@@ -1620,8 +1625,17 @@ label[for] {
 
 // Mailchimp sign-up form
 
-div.mc-field-group input {
-  width: 100%;
+div.mc-field-group {
+  input {
+    width: 100%;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  textarea {
+    background-color : #f1f2f2; 
+    border: 0px solid;
+  }
 }
 
 
