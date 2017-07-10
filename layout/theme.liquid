@@ -278,15 +278,18 @@
         <div class="grid">
           <div class="grid__item large--one-whole medium--one-whole">
           <h5>EYEJACK</h5>
+          <p>EyeJack is an Augmented Reality App and platform that specialises in the curation and distribution of augmented art.</p>
           </div>
         </div>
         <div class="grid">
           <div class="grid__item large--one-half medium--one-half">
-            <p>EyeJack is an Augmented Reality App and platform that specialises in the curation and distribution of augmented art.</p>
-            <p>EyeJack is currently representing 45 AR artists from around the world and is dedicated to building a community around augmented art.</p>
+            <p>Contact Us<br>
           {% if settings.footer_social_enable %}
-              <h3>{{ 'layout.footer.social_title' | t }}</h3>
+              {% comment %}<p class="text-left">{{ 'layout.footer.social_title' | t }}</p>{% endcomment %}
                 <ul class="inline-list social-icons">
+                    <li>
+                      {{ 'social-email.svg' | asset_url | img_tag: 'Email', 'icon' | link_to: 'mailto:info@eyejackapp.com', 'send us an email' }}
+                    </li>
                   {% if settings.social_twitter_link != blank %}
                     <li>
                       <a class="icon-fallback-text" href="{{ settings.social_twitter_link }}" title="{{ shop.name }} on Twitter">
@@ -303,12 +306,18 @@
                       </a>
                     </li>
                   {% endif %}
+                  {% if settings.social_instagram_link != blank %}
+                    <li>
+                      <a class="icon-fallback-text" href="{{ settings.social_instagram_link }}" title="{{ shop.name }} on Instagram">
+                        <span class="icon icon-instagram" aria-hidden="true"></span>
+                        <span class="fallback-text">Instagram</span>
+                      </a>
+                    </li>
+                  {% endif %}
                 </ul>
           {% endif %}
           </div>
           <div class="grid__item large--one-half medium--one-half">
-            <p>Contact Us<br>
-            <a href="mailto:info@eyejackapp.com"><span style="font-weight: bold;">info@eyejackapp.com</span></a></p>
           {% if settings.footer_newsletter_enable %}
               {% comment %}
                 MailChimp is the go-to newsletter service for Shopify.
