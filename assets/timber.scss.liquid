@@ -1806,8 +1806,8 @@ label.error {
 }
 
 .social-icons li {
-  margin: 0 ($gutter / 2) ($gutter / 2);
-  vertical-align: middle;
+  margin: 0 ($gutter / 4) ($gutter / 4);
+  /* vertical-align: middle; */
 
   @include at-query ($min, $postSmall) {
     margin-left: 0;
@@ -1815,7 +1815,7 @@ label.error {
 
   .icon {
     font-size: 30px;
-    /* line-height: 26px; */
+    line-height: 30px;
   }
 
   a {
@@ -2282,7 +2282,7 @@ label.error {
   color: $colorFooterText;
 
   @include at-query ($min, $large) {
-    padding: ($gutter * 2) 0;
+    padding: ($gutter) 0;
   }
 }
 
